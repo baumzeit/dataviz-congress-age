@@ -10,7 +10,6 @@ html, body
 body
 	font: 100% $font-stack
 	background: $page-bg-dark
-	color: $color-dark
 	display: flex
 	flex-direction: column
 
@@ -26,6 +25,9 @@ a
 		font-size: 1.1rem
 		letter-spacing: 0.05em
 
+#dataviz
+	margin: 3rem
+
 .footer
 	background: $page-bg-light
 	padding: 0.3rem 1.2rem
@@ -37,4 +39,17 @@ a
 		color: $color-dark
 		font-size: 0.8rem
 		letter-spacing: 0.05em
+
+circle.median
+	fill: violet
+
+.tick 
+	line
+		stroke: slategray
+
+	text
+		fill: white
+
+.domain
+	stroke: none
 	
