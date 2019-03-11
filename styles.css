@@ -1,9 +1,10 @@
 html, body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
 }
 
 body {
+  min-width: min-content;
   font: 100% Helvetica, sans-serif;
   background: #263940;
   display: flex;
@@ -16,7 +17,7 @@ a {
 
 .header {
   background: #fafafa;
-  padding: 0 1.2rem;
+  padding: 0 1rem;
 }
 .header h1 {
   color: #603;
@@ -25,13 +26,14 @@ a {
 }
 
 #dataviz {
-  margin: 3rem;
+  margin: 2rem 4rem 1rem 4rem;
 }
 
 .footer {
   background: #fafafa;
-  padding: 0.3rem 1.2rem;
+  padding: 0.9rem 0.5rem;
   margin-top: auto;
+  justify-self: flex-end;
   display: flex;
   justify-content: space-between;
 }
@@ -39,14 +41,11 @@ a {
   color: #603;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
-}
-
-circle.median {
-  fill: violet;
+  margin: 0;
 }
 
 .tick line {
-  stroke: slategray;
+  stroke: rgba(255, 255, 255, 0.1);
 }
 .tick text {
   fill: white;

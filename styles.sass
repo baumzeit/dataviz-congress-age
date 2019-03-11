@@ -4,10 +4,11 @@ $page-bg-light: #fafafa
 $color-dark: #603
 
 html, body
-	height: 100%
+	min-height: 100vh
 	margin: 0
 
 body
+	min-width: min-content
 	font: 100% $font-stack
 	background: $page-bg-dark
 	display: flex
@@ -18,7 +19,7 @@ a
 
 .header
 	background: $page-bg-light
-	padding: 0 1.2rem
+	padding: 0 1rem
 
 	h1
 		color: $color-dark
@@ -26,12 +27,13 @@ a
 		letter-spacing: 0.05em
 
 #dataviz
-	margin: 3rem
+	margin: 2rem 4rem 1rem 4rem
 
 .footer
 	background: $page-bg-light
-	padding: 0.3rem 1.2rem
+	padding: 0.9rem 0.5rem
 	margin-top: auto
+	justify-self: flex-end
 	display: flex
 	justify-content: space-between
 
@@ -39,13 +41,11 @@ a
 		color: $color-dark
 		font-size: 0.8rem
 		letter-spacing: 0.05em
-
-circle.median
-	fill: violet
+		margin: 0
 
 .tick 
 	line
-		stroke: slategray
+		stroke: rgba(255,255,255,0.1)
 
 	text
 		fill: white
