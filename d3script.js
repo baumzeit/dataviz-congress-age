@@ -11,6 +11,7 @@ window.onload = function() {
 		const meanAll = d3.mean(data, x => x.age)
 		const allByState = groupByProp(data, 'state')
 		const stateStats = statsByState(allByState)
+		console.log(stateStats)
 
 		const xTickSize = 450;
 		const yTickSize = 1100;
@@ -26,7 +27,7 @@ window.onload = function() {
 			.attr('height', height + margin.top + margin.bottom)
 		
 		const xScale = d3.scalePoint()
-			.domain(data.map(entry => entry.state))
+			.domain(stateStats.map(entry => entry.state))
 			.range([margin.left, width - margin.right])
 	
 		const yScale = d3.scaleLinear()
