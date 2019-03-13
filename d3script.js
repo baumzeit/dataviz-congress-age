@@ -12,8 +12,6 @@ window.onload = function() {
 		const allByState = groupByProp(data, 'state')
 		const stateStats = statsByState(allByState)
 
-		console.log(stateStats)
-
 		const xTickSize = 450;
 		const yTickSize = 1100;
 		
