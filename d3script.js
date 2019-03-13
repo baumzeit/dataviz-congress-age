@@ -11,6 +11,7 @@ window.onload = function() {
 		const meanAll = d3.mean(data, x => x.age)
 		const allByState = groupByProp(data, 'state')
 		const stateStats = statsByState(allByState)
+
 		console.log(stateStats)
 
 		const xTickSize = 450;
@@ -172,12 +173,12 @@ window.onload = function() {
 
 			for (state in allByState) {
 				const ages = allByState[state].map(s => s.age).sort((a, b) => {
-					return a < b ? -1 : 0
+					return a < b ? -1 : (a > b ? 1 : 0)
 				})
 				const obj = { 
 								state: state, 
-								min: ages[0], 
-								max: ages[ages.length - 1],
+								min: +ages[0], 
+								max: +ages[ages.length - 1],
 								median: d3.median(ages), 
 								q1: d3.quantile(ages, 0.25),
 								q3: d3.quantile(ages, 0.75)
@@ -186,7 +187,7 @@ window.onload = function() {
 			}
 
 			return statsByState.sort((a, b) => {
-				return a.state < b.state ? -1 : 0 
+				return a.state < b.state ? -1 : (a.state > b.state ? 1 : 0);
 			});
 		}
 	}
